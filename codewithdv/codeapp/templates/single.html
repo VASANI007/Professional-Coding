@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+
+<!-- Mirrored from themesflat.co/html/motorxhtml/listing-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Dec 2024 13:08:41 GMT -->
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    
+
+    <meta name="author" content="themesflat.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style3.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="/static/images/logo/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/images/logo/logo.png">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/map.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css.css">
+
+</head>
+
+<body class="body counter-scroll">
+
+    <!-- /#page -->
+    <div id="wrapper">
+        <div id="page" class="clearfix">
+            <!-- Main Header -->
+            {% include 'header.html' %}
+            <!-- End Main Header -->
+
+            {% include 'messages.html'%}
+            <!-- property-detail -->
+
+            <div class="widget-property-detail">
+                <div class="d-flex align-items-center mb-3" style="gap: 8px; font-size: 1.1rem;">
+                    <a href="/ourgallerypage" class="text-decoration-none fw-semibold d-flex align-items-center" style="font-size: large;">
+                        Back to Gallery
+                    </a>
+                    <i class="bi bi-arrow-right" style="color: red; font-size: 1.2rem;"></i>
+                    <span class="fw-medium"><strong>{{ data.c_name }}</strong></span>
+                </div>
+            </div>
+            <div class="widget-property-detail">
+                <div class="themesflat-container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="wrap-property-car flex">
+                                <div class="box-1">
+                                    <div class="icon-box-info flex">
+                                        <div class="info flex">
+                                            <span style="font-size: 25px;">Name:</span>
+                                        </div>
+                                    </div>
+                                    <div class="title-heading">{{ data.c_name }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="gallary-property-details">
+                                <div class="swiper property-gallary2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            {% if data.c_img %}
+                            <img
+                              src="/media/{{ data.c_img }}"
+                              alt="{{ data.c_name }}"
+                            />
+                            {% else %}
+                            <img src="/static/media/not.gif" alt="No Image" />
+                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post-property">
+                                <div class="wrap-car-overview wrap-style">
+                                    <h4 class="title">Code Overview</h4>
+                                    <div class="listing-info">
+                                        
+                                            <div class="col-xl-6 col-md-6 item">
+                                                <div class="inner listing-infor-box">
+                                                    <div class="icon">
+                                                        <i class="bi bi-calendar-check" style="color: red; font-size: 1.3em"></i>
+                                                    </div>
+                                                    <div class="content-listing-info">
+                                                        <span class="listing-info-title">Created Date:</span>
+                                                        <p class="listing-info-value"> {{ data.c_createddate }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 item">
+                                                <div class="inner listing-infor-box">
+                                                    <div class="icon">
+                                                        <i class="bi bi-file-earmark-code" style="color: red; font-size: 1.3em"></i>
+                                                    </div>
+                                                    <div class="content-listing-info">
+                                                        <span class="listing-info-title">Code Type:</span>
+                                                        <p class="listing-info-value">{{ data.c_type }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 item">
+                                                <div class="inner listing-infor-box">
+                                                    <div class="icon">
+                                                        <i class="bi bi-card-checklist" style="color: red; font-size: 1.3em"></i>
+                                                    </div>
+                                                    <div class="content-listing-info">
+                                                        <span class="listing-info-title">Category:</span>
+                                                        <p class="listing-info-value">{{ data.c_id }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-property">
+                                    <div class="wrap-description wrap-style">
+                                        <h4 class="title">Required Packages</h4>
+                                <div class="textover">
+                                    <textarea id="requiredpackages" readonly>{{ data.c_required }}</textarea>
+                                    <button class="copy-btn" onclick="copyrequired(this)" title="Copy" style="color:black"><i class="bi bi-copy"> Copy</i></button>
+                                </div>
+                                
+                            </div>
+                            <div class="post-property">
+                                <div class="wrap-description wrap-style">
+                                    <h4 class="title">Full Code</h4>
+                                    <div class="textarea-wrapper">
+                                        <textarea id="fullcode" readonly style="width:100%; overflow:hidden;">{{ data.c_fullcode }}</textarea>
+                                        <button class="copy-btn" onclick="copyText()" title="Copy" style="color:black"><i class="bi bi-copy"> Copy</i></button>
+                                    </div>
+                                </div>
+                                <div class="wrap-description wrap-style">
+                                    <h4 class="title">Description</h4>
+                                    <p>{{ data.c_des }} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- property-detail -->
+
+
+<style>
+.textarea-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.textover {
+    position: relative; /* This is key! */
+    display: inline-block;
+    width: 100%;
+}
+
+.textover textarea {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding: 8px 50px 8px 8px; /* extra space on right for button */
+    font-family: monospace;
+    line-height: 1.4;
+    resize: none;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+
+
+.textarea-wrapper textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 10px 45px 10px 10px; /* extra right padding for icon space */
+    resize: none;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.copy-btn:hover {
+    background: #e0e0e0;
+}
+</style>
+<script>
+function copyText() {
+        const textarea = document.getElementById("fullcode");
+    navigator.clipboard.writeText(textarea.value).then(() => {
+        const btn = document.querySelector(".copy-btn");
+        const oldText = btn.textContent;
+        btn.textContent = "✅ Copied";
+        setTimeout(() => btn.textContent = oldText, 1000);
+    });
+}
+    const textarea = document.getElementById('fullcode');
+    textarea.style.height = "auto"; // reset
+    textarea.style.height = textarea.scrollHeight + "px"; // fit content
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const textarea = document.getElementById('requiredpackages');
+    // Auto-resize to fit content
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";
+});
+
+function copyrequired(btn) {
+    const textarea = document.getElementById("requiredpackages");
+    navigator.clipboard.writeText(textarea.value).then(() => {
+        const oldText = btn.innerHTML;
+        btn.innerHTML = "✅ Copied";
+        setTimeout(() => btn.innerHTML = oldText, 1000);
+    });
+}
+    
+</script>
+    
+    <!-- /#page -->
+
+    <!-- Button Top -->
+    <a id="scroll-top" class="button-go"></a>
+    <!-- Button Top -->
+
+    <!-- Modal-drive -->
+
+
+    <!-- Modal-price -->
+
+
+
+
+    <!-- Javascript -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.nice-select.min.js"></script>
+    <script src="/static/js/swiper-bundle.min.js"></script>
+    <script src="/static/js/swiper.js"></script>
+    <script src="/static/js/jquery-countTo.js"></script>
+    <script src="/static/js/nouislider.min.js"></script>
+    <script src="/static/js/price-ranger.js"></script>
+    <script src="/static/js/magnific-popup.min.js"></script>
+    <script src="/static/js/wow.min.js"></script>
+    <script src="/static/js/map.min.js"></script>
+    <script src="/static/js/map.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/BookButton.js"></script>
+{% include 'footer.html' %}
+</body>
+
+<!-- Mirrored from themesflat.co/html/motorxhtml/listing-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Dec 2024 13:08:49 GMT -->
+</html>

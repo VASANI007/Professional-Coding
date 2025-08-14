@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/map.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nice-select.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css.css' %}" />
+    <link rel="shortcut icon" href="{% static 'images/logo/logo.png' %}">
+</head>
+
+<body class="body counter-scroll">
+<div id="wrapper">
+    <div id="page" class="clearfix">
+
+        <!-- Include Header -->
+        {% include 'header.html' %}
+
+        <!-- About Us Section -->
+        
+<!-- Hero Section -->
+<section style="background: linear-gradient(90deg, #0b305b, #011122, #06031a);" class="bg-dark text-white py-5">
+    
+    <div class="container text-center">
+        <h1 style="color: azure;">About Us</h1>
+        <p class="lead">Sharing Code. Inspiring Minds. Building the Future Together.</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Who We Are</h2>
+        <p>
+            Welcome to <strong>Professional Coding</strong>, a platform dedicated to helping students, developers, and coding
+            enthusiasts learn through real, working project examples. We believe in learning by doing, which is why
+            every project on our site comes with complete source code and output files.
+        </p>
+        <p>
+            Our mission is simple – make coding resources accessible, practical, and inspiring. Whether you are
+            a beginner exploring Python for the first time or a professional looking to improve your skills, our
+            collection of projects is here to help you.
+        </p>
+        <p>
+            We specialize in Python, Django, web development, and automation projects, but we also welcome
+            contributions from other programming languages and frameworks. Professional Coding is more than just a website –
+            it’s a growing community of learners and creators.
+        </p>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-4 text-center">Our Mission & Vision</h2><br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Our Mission</h4>
+                <p>
+                    To empower developers worldwide by providing high-quality, practical coding resources
+                    that help them grow their skills and turn their ideas into reality.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h4>Our Vision</h4>
+                <p>
+                    To become the most trusted platform for learning and sharing programming projects,
+                    enabling a global community of innovative problem-solvers.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Include Footer -->
+        {% include 'footer.html' %}
+    </div>
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
